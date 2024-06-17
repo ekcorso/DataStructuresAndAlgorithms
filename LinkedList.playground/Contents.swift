@@ -30,4 +30,11 @@ class LinkedList {
     }
 }
 
+// Test insert
+let linkedList = LinkedList()
+linkedList.insert(5)
+linkedList.insert(1)
+
+
+
 
