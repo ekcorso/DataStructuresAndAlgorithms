@@ -28,13 +28,22 @@ class LinkedList {
             lastNode.next = newNode
         }
     }
+    
+    func printAll() {
+        var current: Node! = self.head
+        while current != nil && current.data != nil {
+            print(current.data!)
+            current = current.next
+        }
+    }
 }
 
 // Test insert
 let linkedList = LinkedList()
 linkedList.insert(5)
 linkedList.insert(1)
-
+linkedList.insert(7)
+linkedList.printAll()
 
 
 
