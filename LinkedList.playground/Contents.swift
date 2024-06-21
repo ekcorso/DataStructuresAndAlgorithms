@@ -14,6 +14,16 @@ class Node {
 class LinkedList {
     var head: Node = Node()
     
+    var last: Node? {
+        var node = head
+        
+        while let next = node.next {
+            node = next
+        }
+        
+        return node
+    }
+    
     func insert(_ data: Int) {
         if head.data == nil {
             self.head.data = data
@@ -43,7 +53,7 @@ let linkedList = LinkedList()
 linkedList.insert(5)
 linkedList.insert(1)
 linkedList.insert(7)
+
 linkedList.printAll()
 
-
-
+print(linkedList.last?.data)
